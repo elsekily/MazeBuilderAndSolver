@@ -1,0 +1,21 @@
+<div class="grid-container">
+    <div *ngFor="let row of grid; let i = index" class="grid-row">
+        <div *ngFor="let cell of row; let j = index" class="grid-cell" [style.background]="getBackgroundColor(cell)"
+            (click)="onCellClick(i,j)">
+            {{ i == 0 && j == 0 ? 'end': ''}}
+            {{i == 10 && j == 10 ? 'start' : ''}}
+        </div>
+    </div>
+
+    <div class="vertical-center">
+        <div [ngStyle]="{'visibility': state == 0 ? 'visible' : 'hidden'}">
+            <button type="button" class="btn btn-primary" (click)="Solve()">Solve</button>
+        </div>
+        <div [ngStyle]="{'visibility': state == 2 ? 'visible' : 'hidden'}">
+            <button type="button" class="btn btn-primary" (click)="Reset()">Reset</button>
+        </div>
+    </div>
+
+
+
+</div>

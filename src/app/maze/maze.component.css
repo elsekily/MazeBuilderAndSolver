@@ -1,0 +1,29 @@
+ .grid-container {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .grid-row {
+     display: flex;
+ }
+
+ .grid-cell {
+     width: 50px;
+     /* Set the width of each cell */
+     height: 50px;
+     /* Set the height to make it square */
+     border: 1px solid #ccc;
+     /* Optional: Add a border for better visualization */
+     text-align: center;
+     line-height: 50px;
+     /* Center content vertically */
+ }
+
+ .vertical-center {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 20px;
+     /* Center the items horizontally */
+     /* Optional: Add some top margin for spacing */
+ }
