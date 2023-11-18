@@ -2,8 +2,6 @@
     <div *ngFor="let row of grid; let i = index" class="grid-row">
         <div *ngFor="let cell of row; let j = index" class="grid-cell" [style.background]="getBackgroundColor(cell)"
             (click)="onCellClick(i,j)">
-            {{ i == 0 && j == 0 ? 'end': ''}}
-            {{i == 10 && j == 10 ? 'start' : ''}}
         </div>
     </div>
 
